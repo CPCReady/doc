@@ -11,7 +11,7 @@ Ready
 
 ##
 <p align="center">
-<img src="images/CPCReady_logo.png" 
+<img src="images/logo.jpg" 
         alt="CPCReady" 
         style="display: block; margin: 0 auto" />
 </p>
