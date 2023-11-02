@@ -1,6 +1,6 @@
 
-##
-![Descripción de la imagen](images/CPCReady_logo.png)
+<!-- ##
+![Descripción de la imagen](images/CPCReady_logo.png) -->
 <!-- ```bash
 ╔═╗╔═╗╔═╗ ┌─────────────┐
 ║  ╠═╝║   │ ███ ███ ███ │
@@ -8,6 +8,13 @@
 Ready
 █
 ``` -->
+
+##
+<p align="center">
+<img src="images/CPCReady_logo.png" 
+        alt="CPCReady" 
+        style="display: block; margin: 0 auto" />
+</p>
 
 
 ![GitHub](https://img.shields.io/github/license/cpcready/installer?color=green)  ![GitHub Latest Release)](https://img.shields.io/github/v/release/cpcready/installer?logo=github&color=green)     <a href="https://github.com/cpcready/installer/pulse" alt="Activity"><img src="https://img.shields.io/github/commit-activity/m/cpcready/installer?color=blue" /></a> ![example workflow](https://github.com/cpcready/installer/actions/workflows/release.yml/badge.svg?color=green) ![GitHub issues](https://img.shields.io/github/issues/cpcready/installer) ![GitHub pull requests](https://img.shields.io/github/issues-pr/amstrad-sdk/cpcready)
