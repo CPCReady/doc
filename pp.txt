@@ -1,0 +1,33 @@
+[core]
+    repositoryformatversion = 0
+    filemode = false
+    bare = false
+    logallrefupdates = true
+    symlinks = false
+    ignorecase = true
+[remote "origin"]
+    url = https://github.com/theLastPixel/Home-sales-web.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "pageNosotros"]
+    remote = origin
+    merge = refs/heads/pageNosotros
+[credential]
+    helper = manager
+
+
+
+[core]
+    repositoryformatversion = 0
+    filemode = false
+    bare = false
+    logallrefupdates = true
+    symlinks = false
+    ignorecase = true
+[remote "origin"]
+    url = https://github.com/theLastPixel/Home-sales-web.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "pageNosotros"]
+    remote = origin
+    merge = refs/heads/pageNosotros
+[credential]
+    interactive = always
