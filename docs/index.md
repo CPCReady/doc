@@ -10,7 +10,7 @@ Ready
 ``` -->
 
 
-![GitHub](https://img.shields.io/github/license/cpcready/installer?color=green)  ![GitHub Latest Release)](https://img.shields.io/github/v/release/cpcready/installer?logo=github&color=green)     <a href="https://github.com/cpcready/installer/pulse" alt="Activity"><img src="https://img.shields.io/github/commit-activity/m/cpcready/installer?color=blue" /></a> ![example workflow](https://github.com/cpcready/installer/actions/workflows/release.yml/badge.svg?color=green) ![PyPI - Version](https://img.shields.io/pypi/v/gotocpc?color=green) ![GitHub issues](https://img.shields.io/github/issues/cpcready/installer) ![GitHub pull requests](https://img.shields.io/github/issues-pr/amstrad-sdk/cpcready)
+![GitHub](https://img.shields.io/github/license/cpcready/installer?color=green)  ![GitHub Latest Release)](https://img.shields.io/github/v/release/cpcready/installer?logo=github&color=green)     <a href="https://github.com/cpcready/installer/pulse" alt="Activity"><img src="https://img.shields.io/github/commit-activity/m/cpcready/installer?color=blue" /></a> ![example workflow](https://github.com/cpcready/installer/actions/workflows/release.yml/badge.svg?color=green) ![GitHub issues](https://img.shields.io/github/issues/cpcready/installer) ![GitHub pull requests](https://img.shields.io/github/issues-pr/amstrad-sdk/cpcready)
 
 
 
