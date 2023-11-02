@@ -8,5 +8,5 @@ nav:
     - Instalacion: 'install.md'
     - Como Empezar: 'users-guide.md'
   - Acerca de: 'about.md'
-  
+site_url: https://cpcready.github.io/doc/  
 theme: readthedocs
