@@ -1,6 +1,5 @@
 
-##
-![Descripción de la imagen](images/CPCReady_logo.png)
+
 <!-- ```bash
 ╔═╗╔═╗╔═╗ ┌─────────────┐
 ║  ╠═╝║   │ ███ ███ ███ │
