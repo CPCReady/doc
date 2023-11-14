@@ -1,3 +1,6 @@
+
+<p align="center"><img src="images/logo.png" alt="CPCReady" style="display: block; margin: 0 auto" /></p>
+
 # Instalacion
 
 La instación de **CPCReady** es muy sencilla, tan solo se necesitan ciertos requisitos para poder instalarlos.
