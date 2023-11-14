@@ -54,6 +54,16 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Como Empezar</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#ayuda">Ayuda</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#project">project</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#archivos-de-configuracion">Archivos de configuracion</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#projectcfg">project.cfg</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                   </li>
               </ul>
@@ -85,10 +95,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="como-empezar">Como Empezar</h2>
+                <h1 id="como-empezar">Como Empezar</h1>
 <p>Podemos ejecutar <strong>CPCReady</strong> desde el shell con uno de los siguientes comando que estan disponibles: cpc, cpcr o bien cpcready</p>
-<h2 id="comandos-disponibles">Comandos disponibles</h2>
-<h3 id="ayuda">Ayuda</h3>
+<p>Disponemos de los siguientes comandos para trabajar.</p>
+<h2 id="ayuda">Ayuda</h2>
 <p>Si queremos que nos muestre la ayuda de <strong>CPCReady</strong> ejecutaremos el comando</p>
 <pre><code class="language-sh">cpcready --help
 
@@ -124,18 +134,13 @@ Options:
   --help   
 
 </code></pre>
-<h3 id="project">project</h3>
+<h2 id="project">project</h2>
 <p>El comando <strong>project</strong> nos creara la esctructura de carpetas necesarias para trabajar con <strong>CPCReady</strong> en la ruta donde estemos situado:</p>
-<pre><code class="language-sh">cpcready project                                        2 ✘  sdk   13:06:40  
-
-┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ ╔═╗╔═╗╔═╗ ┌─────────────┐                                                                                   │
-│ ║  ╠═╝║   │ ███ ███ ███ │                                                                                   │
-│ ╚═╝╩  ╚═╝ └─────────────┘                                                                                   │
-│ Ready                                                                                                       │
-│ █                                                                                                   v0.0.10 │
-└─────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-
+<ul>
+<li>Primero nos solicitara si queremos activar la nomenclatura 6:3, es decir que si solo queremos trabajar en el proyecto con nombres que solo pueden tener 6 caracteres de nombre de archivo y 3 de extension. Si añadimos un archivo al projecto que tenga mas de esos caracteres, cuando compilemos para generar nuestros archivos para CPC el proceso fallara. </li>
+<li>Nos solicitara el nombre del proyecto. Que recomendamos que no tenga espacios.</li>
+</ul>
+<pre><code class="language-sh">cpcready project 
 
 [?] You want to activate the nomenclature 6:3?: Yes
  &gt; Yes
@@ -167,6 +172,53 @@ Options:
 👉  Thank you for using CPCReady 
 
 </code></pre>
+<p>Una vez finalizada la creacion del proyecto tendremos disponibles una serie de carpetas que contendran:.</p>
+<ul>
+<li>out:  Archivos DSK, CDT y ficheros para la M4 Board.</li>
+<li>src:  Archivos BAS y UGD (Para Basic compilado)</li>
+<li>cfg:  Archivos de configuracion de nuestro proyecto.</li>
+<li>lib:  Librerias que utilizaremos, como por ejemplo un binario o la libreria (8BP)</li>
+<li>img:  Imagenes en formato PNG o JPG.</li>
+<li>spr:  Imagenes de nuestro sprites.</li>
+<li>docs: Cualquier documentacion de nuestro proyecto.</li>
+</ul>
+<h2 id="archivos-de-configuracion">Archivos de configuracion</h2>
+<p>Disponemos de los siguientes archivos de configuracion.</p>
+<h3 id="projectcfg">project.cfg</h3>
+<p>El archivo <strong>project.cfg</strong> dispone de las siguientes opciones configurables.</p>
+<pre><code class="language-sh">[general]
+name           = Mi_Proyecto
+nomenclature63 = Yes
+
+[configurations]
+concatenate =
+
+[CDT]
+files       = MAIN.BIN,MAIN.BAS
+
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td>Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</td>
+</tr>
+<tr>
+<td><strong>nomenclature63</strong></td>
+<td>Si esta activada la nomenclatura 6:3. Valores admitidos: Yes / No</td>
+</tr>
+<tr>
+<td><strong>concatenate</strong></td>
+<td>La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div><footer>
