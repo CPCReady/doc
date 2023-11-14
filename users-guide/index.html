@@ -62,6 +62,8 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#projectcfg">project.cfg</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#emulatorscfg">emulators.cfg</a>
+    </li>
         </ul>
     </li>
     </ul>
@@ -202,13 +204,48 @@ concatenate =
 files       = MAIN.BIN,MAIN.BAS
 
 </code></pre>
-<p><code>[general] name:</code>
+<p><code>name=</code>
 Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</p>
-<p><code>[general] nomenclature63:</code> 
+<p><code>nomenclature63=</code> 
 Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.</p>
-<p><code>[configurations] concatenate:</code> 
+<p><code>concatenate=</code> 
 La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</p>
-<p><code>[CDT] files:</code>
+<p><code>files=</code>
+Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
+<h3 id="emulatorscfg">emulators.cfg</h3>
+<p>El archivo <strong>emulators.cfg</strong> dispone de las siguientes con las que podemos probar nuestros proyecto en Retro Virtual Machine.</p>
+<pre><code class="language-sh">[WEB6128]
+type   = web
+model  = 6128
+run    = run&quot;MAIN.BAS&quot;
+image  = out/Mi_Proyecto.DSK
+path   = cfg/rvm-web.html
+
+[CPC6128]
+type   = desktop
+model  = 6128
+run    = run&quot;MAIN.BAS&quot;
+image  = out/Mi_Proyecto.DSK
+
+[CPC464]
+type   = desktop
+model  = 464
+run    = run&quot;&quot;
+image  = out/Mi_Proyecto.CDT
+
+[m4board]
+## There must be a folder called /tmp on the M4 Board
+ip      = 0.0.0.0
+execute = MAIN.BAS
+folder  = Mi_Proyecto
+</code></pre>
+<p><code>name=</code>
+Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</p>
+<p><code>nomenclature63=</code> 
+Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.</p>
+<p><code>concatenate=</code> 
+La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</p>
+<p><code>files=</code>
 Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
               
             </div>
