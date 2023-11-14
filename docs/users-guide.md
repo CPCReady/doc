@@ -166,14 +166,14 @@ execute = MAIN.BAS
 folder  = Mi_Proyecto
 ```
 
-`name=`
+`name `
 Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.
 
-`nomenclature63=` 
+`nomenclature63 ` 
 Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.
 
-`concatenate=` 
+`concatenate ` 
 La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.
 
-`files=`
+`files `
 Los ficheros en el orden en el que se cargaran en la imagen CDT.
