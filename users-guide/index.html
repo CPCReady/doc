@@ -184,13 +184,13 @@ Options:
 </ul>
 <h2 id="archivos-de-configuracion">Archivos de configuracion</h2>
 <p>Disponemos de los siguientes archivos de configuracion.</p>
-<h3 id="projectcfg">project.cfg</h3>
-<p>El archivo <strong>project.cfg</strong> dispone de las siguientes opciones configurables.</p>
 <blockquote>
 <p><strong>NOTA: 
 Los ficheros de configuracion son susceptibles a mayusculas y minusculas</strong>
 </p>
 </blockquote>
+<h3 id="projectcfg">project.cfg</h3>
+<p>El archivo <strong>project.cfg</strong> dispone de las siguientes opciones configurables.</p>
 <pre><code class="language-sh">[general]
 name           = Mi_Proyecto
 nomenclature63 = Yes
@@ -202,50 +202,13 @@ concatenate =
 files       = MAIN.BIN,MAIN.BAS
 
 </code></pre>
-<table>
-<thead>
-<tr>
-<th>section</th>
-<th>key</th>
-<th>value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>[general]</td>
-<td><strong>name</strong></td>
-<td>Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</td>
-</tr>
-<tr>
-<td>[general]</td>
-<td><strong>nomenclature63</strong></td>
-<td>Si esta activada la nomenclatura 6:3. Valores admitidos: Yes / No</td>
-</tr>
-<tr>
-<td>[configurations]</td>
-<td><strong>concatenate</strong></td>
-<td>La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</td>
-</tr>
-<tr>
-<td>[CDT]</td>
-<td><strong>files</strong></td>
-<td>Los ficheros en el orden en el que se cargaran en la imagen CDT.</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><code>[general] name=</code> Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</li>
-<li><code>[general] nomenclature63=</code> Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.</li>
-<li><code>[configurations] concatenate=</code> La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</li>
-<li><code>[CDT] files=</code> Los ficheros en el orden en el que se cargaran en la imagen CDT.</li>
-</ul>
-<p><code>[general] name</code>
+<p><code>[general] name:</code>
 Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</p>
-<p><code>[general] nomenclature63</code> 
+<p><code>[general] nomenclature63:</code> 
 Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.</p>
-<p><code>[configurations] concatenate</code> 
+<p><code>[configurations] concatenate:</code> 
 La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</p>
-<p><code>[CDT] files</code>
+<p><code>[CDT] files:</code>
 Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
               
             </div>
