@@ -186,6 +186,11 @@ Options:
 <p>Disponemos de los siguientes archivos de configuracion.</p>
 <h3 id="projectcfg">project.cfg</h3>
 <p>El archivo <strong>project.cfg</strong> dispone de las siguientes opciones configurables.</p>
+<blockquote>
+<p><strong>NOTA: 
+Los ficheros de configuracion son susceptibles a mayusculas y minusculas</strong>
+</p>
+</blockquote>
 <pre><code class="language-sh">[general]
 name           = Mi_Proyecto
 nomenclature63 = Yes
@@ -220,6 +225,11 @@ files       = MAIN.BIN,MAIN.BAS
 <td>[configurations]</td>
 <td><strong>concatenate</strong></td>
 <td>La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</td>
+</tr>
+<tr>
+<td>[CDT]</td>
+<td><strong>nomenclature63</strong></td>
+<td>Los ficheros en el orden en el que se cargaran en la imagen CDT.</td>
 </tr>
 </tbody>
 </table>
