@@ -15,14 +15,10 @@ Ready
         style="display: block; margin: 0 auto" />
 </p>
 
+![GitHub](https://img.shields.io/github/license/cpcready/sdk?color=green)  ![GitHub Latest Release)](https://img.shields.io/github/v/release/cpcready/sdk?logo=github&color=green)     <a href="https://github.com/cpcready/sdk/pulse" alt="Activity"><img src="https://img.shields.io/github/commit-activity/m/cpcready/sdk?color=blue" /></a> ![example workflow](https://github.com/cpcready/sdk/actions/workflows/release.yml/badge.svg?color=green) ![PyPI - Version](https://img.shields.io/pypi/v/cpcready?color=green) ![GitHub issues](https://img.shields.io/github/issues/cpcready/sdk) ![GitHub pull requests](https://img.shields.io/github/issues-pr/cpcready/sdk)
 
-![GitHub](https://img.shields.io/github/license/cpcready/installer?color=green)  ![GitHub Latest Release)](https://img.shields.io/github/v/release/cpcready/installer?logo=github&color=green)     <a href="https://github.com/cpcready/installer/pulse" alt="Activity"><img src="https://img.shields.io/github/commit-activity/m/cpcready/installer?color=blue" /></a> ![example workflow](https://github.com/cpcready/installer/actions/workflows/release.yml/badge.svg?color=green) ![GitHub issues](https://img.shields.io/github/issues/cpcready/installer) ![GitHub pull requests](https://img.shields.io/github/issues-pr/amstrad-sdk/cpcready)
-
-
-
-
-**CPCReady** es un conjunto de herramientas que ayudan y facilitan el desarrollo en lenguaje de programación Basic para Amstrad CPC desde PC's modernos. 
-El core de **CPCReady** esta desarrollado en Python =>3.6 Incluye herramientas externas que facilitan la ejecucion de tareas. Es una aplicación multiplataforma para sistemas operativos Windows, Linux y mac, y se utiliza desde la linea de comando.
+**CPCReady** es un conjunto de herramientas que ayudan y facilitan el desarrollo en lenguaje de programación Basic para Amstrad CPC desde PC's modernos. Se puede utilizar tambien Basic compilado con [ugbasic](https://ugbasic.iwashere.eu/)
+El core de **CPCReady** esta desarrollado en Python =>3.8 Incluye herramientas externas que facilitan la ejecucion de tareas. La aplicacion solo funciona en sistemas linux, pero es posible utilizar en Windows WSL o en una maquina virtual.
 
 
 ### Caracteristicas
@@ -30,38 +26,13 @@ El core de **CPCReady** esta desarrollado en Python =>3.6 Incluye herramientas e
 Algunas de las caracteristicas incluidas en **CPCReady** son:
 
 - Creación de proyectos.
-- Programación en Basic por objetos (scripts independientes).
-- Generacion de imagenes DSK y CDT de tu proyecto.
-- Creación de Pantallas de carga y sprites.
+- Programación en Basic por objetos (BAS independientes).
+- Generacion de imagenes DSK, CDT y archivos preparados para M4 Board.
+- Creación de Pantallas de carga y sprites desde una imagen.
 - test y pruebas sobre RetrovirtualMachine Desktop y Web.
-- Integración con 8BP y ugBASIC.
+- Basic compilado con la libreria [ugbasic](https://ugbasic.iwashere.eu/)
+- Integración con 8BP.
 - Y mucho mas....
-
-
-
-### Herramientas
-
-Las herramientas externas utilizadas son:
-
-
-- [iDSK](https://github.com/ralferoo/cpctools/) : Para la creación de imagenes de disco
-- [2CDT](https://github.com/ralferoo/cpctools/) : Para la creación de imagenes de cinta
-- [RetroVirtualMachine](https://www.retrovirtualmachine.org/) : Para testear tus proyectos. Tanto con version Web, como desktop.
-- [ugBasic](https://ugbasic.iwashere.eu/install) : Para programar en este lenguaje ademas del Locomotive Basic de toda la vida.
-- [Visual Studio Code](https://code.visualstudio.com/) : Como IDE de desarrollo + Extensiones que te ayudaran a programar.
-- [Martine](https://github.com/jeromelesaux/martine/) : Para la creación de sprites y pantallas de carga.
-- [z88dk](https://z88dk.org/site/download): Como compilador para ugbasic.
-
-### Próximas Mejoras
-
-Las siguientes mejoras a realizar en la aplicación son
-
-| Mejora |  Fecha|Incluido en Version|
-| ------ | ------ | ------ |
-| Soporte para archivos de cassette CDT | --- | ---|
-| Pruebas de desarrollo sobre M4 Board | --- | ---|
-| Programacion en ugBasic | --- | ---|
-
 
 ### Contacto
 
