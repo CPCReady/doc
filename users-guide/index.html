@@ -53,6 +53,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../install/">Instalacion</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Como Empezar</a>
+    <ul class="current">
+    </ul>
                   </li>
               </ul>
               <ul>
@@ -83,7 +85,59 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                
+                <h2 id="como-empezar">Como Empezar</h2>
+<p>Podemos ejecutar <strong>CPCReady</strong> desde el shell con uno de los siguientes comando que estan disponibles: cpc, cpcr o bien cpcready</p>
+<h2 id="comandos-disponibles">Comandos disponibles</h2>
+<h3 id="ayuda">Ayuda</h3>
+<p>Si queremos que nos muestre la ayuda de <strong>CPCReady</strong> ejecutaremos el comando</p>
+<pre><code class="language-sh">cpcready --help
+
+Usage: cpcready [OPTIONS] COMMAND [ARGS]...
+
+  CLI SDK for programming in Amstrad Locomotive Basic and Compiled Basic with
+  Ugbasic.
+
+Options:
+  --version  Show the version and exit.
+  --help     Show this message and exit.
+
+Commands:
+  build    Create project disk and cdt image.
+  info     Show infor CPCReady.
+  palette  Extract the color palette from the image.
+  project  Create the project structure for CPCReady.
+  run      Execute DSK/CDT in emulator.
+  screen   Convert an image to Amstrad scr format.
+  sprite   Extract the color palette from the image.
+
+</code></pre>
+<p>Si lo que queremos es que nos muestre la ayuda de cada uno de los comandos, pasaremos el parametro --help por el comando en cuestion. Por ejemplo:</p>
+<pre><code class="language-sh">cpcready palette --help
+
+Usage: cpcready palette [OPTIONS]
+
+  Extract the color palette from the image.
+
+Options:
+  -i, --image TEXT    Input file name  [required]
+  -m, --mode [0|1|2]  Image Mode (0, 1, 2)  [required]
+  --help   
+
+</code></pre>
+<h3 id="project">project</h3>
+<p>El comando <strong>project</strong> nos creara la esctructura de carpetas necesarias para trabajar con <strong>CPCReady</strong> en la ruta donde estemos situado:</p>
+<pre><code class="language-sh">cpcready palette --help
+
+Usage: cpcready palette [OPTIONS]
+
+  Extract the color palette from the image.
+
+Options:
+  -i, --image TEXT    Input file name  [required]
+  -m, --mode [0|1|2]  Image Mode (0, 1, 2)  [required]
+  --help   
+
+</code></pre>
               
             </div>
           </div><footer>
