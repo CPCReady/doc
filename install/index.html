@@ -102,7 +102,7 @@
                 <p align="center"><img src="images/logo.png" alt="CPCReady" style="display: block; margin: 0 auto" /></p>
 
 <h1 id="instalacion">Instalacion</h1>
-<p>La instación de <strong>CPCReady</strong> es muy sencilla, tan solo se necesitan ciertos requisitos para poder instalarlos.</p>
+<p><strong>CPCReady</strong> Solo funciona en linux. Lo puedes utilizar desde windowns con WSL, o bien descargandote una maquina virtual para Virtualbox. </p>
 <h2 id="requisitos">Requisitos</h2>
 <table>
 <thead>
@@ -116,7 +116,7 @@
 <tr>
 <td>Python</td>
 <td><a href="https://www.python.org/downloads/">Descarga</a></td>
-<td>3. 6 o superior (Recomendada =&gt;3.10)</td>
+<td>3.8 o superior (Recomendada =&gt;3.10)</td>
 </tr>
 <tr>
 <td>Visual Studio Code</td>
@@ -125,38 +125,36 @@
 </tr>
 </tbody>
 </table>
-<p>Para ver como instalar Python en todos los sistemas ver <a href="https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/instalar-python/">este link </a></p>
-<p>Una vez instalado Python en tu sistema operativo, comprobaremos si tenemos la herramienta <strong>pip</strong> instalada. Esta herramienta nos permitira instalar CPCReady y mas modulos que algun dia podamos necesitar. </p>
-<p>Para ello abriremos un terminal (si no sabes como hacerlo accede a <a href="https://www.ionos.es/ayuda/correo/solucion-de-problemas-correo-basiccorreo-profesional/abrir-la-linea-de-comandos-terminal/#:~:text=Abrir%20la%20l%C3%ADnea%20de%20comandos%20en%20Windows,entrada%20con%20la%20tecla%20Enter.">este link </a> para verlo.</p>
+<p>Linux por defecto trae Python instalado, pero si no lo tubieras, puedes ver como instalarlo desde este <a href="https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/instalar-python/">link.</a></p>
+<p>Primero comprobaremos si tenemos la herramienta <strong>pip</strong> instalada. Esta herramienta es un gestor de paquetes que nos permitira instalar CPCReady y mas modulos que algun dia podamos necesitar. </p>
+<p>Para ello abriremos un terminal (si no sabes como hacerlo accede a este <a href="https://www.ionos.es/ayuda/correo/solucion-de-problemas-correo-basiccorreo-profesional/abrir-la-linea-de-comandos-terminal/#:~:text=Abrir%20la%20l%C3%ADnea%20de%20comandos%20en%20Windows,entrada%20con%20la%20tecla%20Enter.">link </a> para verlo.)</p>
 <p>Y ejecutaremos</p>
 <blockquote>
 <p><strong>NOTA: 
 Dependiendo de los sistemas operativos, el comando puede ser pip o pip3</strong>
 </p>
 </blockquote>
-<pre><code class="language-sh">pip --version
+<pre><code class="language-sh">pip3 --version
 </code></pre>
 <p>Si nos devuelve la versión podremos continuar con la instalacion. Si no consulta <a href="https://tecnonucleous.com/2018/01/28/como-instalar-pip-para-python-en-windows-mac-y-linux/">Instalar Pip en tu Sistema Operativo</a>.</p>
 <h2 id="instalar-cpcready">Instalar CPCReady</h2>
 <p>Para instalar CPCReady en nuestra maquina, desde un terminal ejecutaremos:</p>
-<pre><code class="language-sh">pip install cpcready
+<pre><code class="language-sh">pip3 install cpcready
 </code></pre>
 <p>Esto nos instalara la ultima version del software que este disponible en los repositorios. Podremos comprobar la version instalada ejecutando</p>
 <pre><code class="language-sh">CPCReady --version
 </code></pre>
 <h2 id="upgrade-cpcready">Upgrade CPCReady</h2>
 <p>Si ya tubieramos una version instalada de <strong>CPCReady</strong> y queremos instalar la ultima ejecutaremos:</p>
-<pre><code class="language-sh">pip install cpcready --upgrade
+<pre><code class="language-sh">pip3 install cpcready --upgrade
 </code></pre>
 <h2 id="instalar-visual-studio-code">Instalar Visual Studio Code</h2>
-<p>Aunque ya tendrias instalado <strong>CPCReady</strong> y podrias empezar a crear tus propios proyectos con Basic, te recomendamos que para una mejor experiencia lo hagas a traves de la herramienta de desarrollo Visual Studio Code.</p>
+<p>Aunque ya tendrias instalado <strong>CPCReady</strong> y podrias empezar a crear tus propios proyectos, te recomendamos que para una mejor experiencia lo hagas a traves de la herramienta de desarrollo Visual Studio Code.</p>
 <p>Para instalarla ve al Software Market de tu sistema operativo, buscala e instalala. Si quieres instalarla manualmente puedes descargarla desde <a href="https://code.visualstudio.com/downloads/">aqui</a>.</p>
 <h2 id="extensiones-en-visual-studio-code">Extensiones en Visual Studio Code</h2>
 <p>Sera necesario que en Visual Studio Code, instalemos las siguientes extensiones para mayor comodidad en la programación. Las extensiones a instalar son:</p>
 <ul>
-<li>sdkcpc-amstrad-basic-language</li>
-<li>sdkcpc-amstrad-basic-snippet</li>
-<li>sdkcpc-amstrad-ugbasic-language</li>
+<li>cpcready.basic-language-extension</li>
 <li>ms-vscode.live-server</li>
 </ul>
 <h3 id="como-instalar-extensiones">Como instalar extensiones</h3>
