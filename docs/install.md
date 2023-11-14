@@ -1,7 +1,6 @@
 
-<p align="center"><img src="images/logo.png" alt="CPCReady" style="display: block; margin: 0 auto" /></p>
 
-# Instalacion
+## Instalacion
 
 **CPCReady** Solo funciona en linux. Lo puedes utilizar desde windowns con WSL, o bien descargandote una maquina virtual para Virtualbox. 
 
