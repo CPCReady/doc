@@ -1,10 +1,10 @@
-## Como Empezar
+# Como Empezar
 
 Podemos ejecutar **CPCReady** desde el shell con uno de los siguientes comando que estan disponibles: cpc, cpcr o bien cpcready
 
-## Comandos disponibles
+Disponemos de los siguientes comandos para trabajar.
 
-### Ayuda
+## Ayuda
 
 Si queremos que nos muestre la ayuda de **CPCReady** ejecutaremos el comando
 
@@ -47,21 +47,15 @@ Options:
 
 ```
 
-### project
+## project
 
 El comando **project** nos creara la esctructura de carpetas necesarias para trabajar con **CPCReady** en la ruta donde estemos situado:
 
+- Primero nos solicitara si queremos activar la nomenclatura 6:3, es decir que si solo queremos trabajar en el proyecto con nombres que solo pueden tener 6 caracteres de nombre de archivo y 3 de extension. Si añadimos un archivo al projecto que tenga mas de esos caracteres, cuando compilemos para generar nuestros archivos para CPC el proceso fallara. 
+- Nos solicitara el nombre del proyecto. Que recomendamos que no tenga espacios.
+
 ```sh
-cpcready project                                        2 ✘  sdk   13:06:40  
-
-┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ ╔═╗╔═╗╔═╗ ┌─────────────┐                                                                                   │
-│ ║  ╠═╝║   │ ███ ███ ███ │                                                                                   │
-│ ╚═╝╩  ╚═╝ └─────────────┘                                                                                   │
-│ Ready                                                                                                       │
-│ █                                                                                                   v0.0.10 │
-└─────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-
+cpcready project 
 
 [?] You want to activate the nomenclature 6:3?: Yes
  > Yes
@@ -93,3 +87,40 @@ cpcready project                                        2 ✘  sdk  
 👉  Thank you for using CPCReady 
 
 ```
+
+Una vez finalizada la creacion del proyecto tendremos disponibles una serie de carpetas que contendran:.
+
+- out:  Archivos DSK, CDT y ficheros para la M4 Board.
+- src:  Archivos BAS y UGD (Para Basic compilado)
+- cfg:  Archivos de configuracion de nuestro proyecto.
+- lib:  Librerias que utilizaremos, como por ejemplo un binario o la libreria (8BP)
+- img:  Imagenes en formato PNG o JPG.
+- spr:  Imagenes de nuestro sprites.
+- docs: Cualquier documentacion de nuestro proyecto.
+
+## Archivos de configuracion
+
+Disponemos de los siguientes archivos de configuracion.
+
+### project.cfg
+
+El archivo **project.cfg** dispone de las siguientes opciones configurables.
+
+```sh
+[general]
+name           = Mi_Proyecto
+nomenclature63 = Yes
+
+[configurations]
+concatenate =
+
+[CDT]
+files       = MAIN.BIN,MAIN.BAS
+
+```
+
+| key | value |
+| ----- | ----- |
+| **name** | Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios. |
+| **nomenclature63** | Si esta activada la nomenclatura 6:3. Valores admitidos: Yes / No  |
+| **concatenate** | La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.   |
