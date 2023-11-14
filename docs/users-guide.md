@@ -158,7 +158,7 @@ type   = desktop
 model  = 464
 run    = run""
 image  = out/Mi_Proyecto.CDT
-
+`name `
 [m4board]
 ## There must be a folder called /tmp on the M4 Board
 ip      = 0.0.0.0
