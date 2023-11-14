@@ -3,20 +3,20 @@
 
 # Instalacion
 
-La instación de **CPCReady** es muy sencilla, tan solo se necesitan ciertos requisitos para poder instalarlos.
+**CPCReady** Solo funciona en linux. Lo puedes utilizar desde windowns con WSL, o bien descargandote una maquina virtual para Virtualbox. 
 
 ## Requisitos
 
 | Software | URL |Version |
 | ------ | ------ | ------ |
-| Python | [Descarga](https://www.python.org/downloads/) | 3. 6 o superior (Recomendada =>3.10)|
+| Python | [Descarga](https://www.python.org/downloads/) | 3.8 o superior (Recomendada =>3.10)|
 | Visual Studio Code |[Descarga](https://www.python.org/downloads/) | Latest|
 
-Para ver como instalar Python en todos los sistemas ver [este link ](https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/instalar-python/)
+Linux por defecto trae Python instalado, pero si no lo tubieras, puedes ver como instalarlo desde este [link.](https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/instalar-python/)
 
-Una vez instalado Python en tu sistema operativo, comprobaremos si tenemos la herramienta **pip** instalada. Esta herramienta nos permitira instalar CPCReady y mas modulos que algun dia podamos necesitar. 
+Primero comprobaremos si tenemos la herramienta **pip** instalada. Esta herramienta es un gestor de paquetes que nos permitira instalar CPCReady y mas modulos que algun dia podamos necesitar. 
 
-Para ello abriremos un terminal (si no sabes como hacerlo accede a [este link ](https://www.ionos.es/ayuda/correo/solucion-de-problemas-correo-basiccorreo-profesional/abrir-la-linea-de-comandos-terminal/#:~:text=Abrir%20la%20l%C3%ADnea%20de%20comandos%20en%20Windows,entrada%20con%20la%20tecla%20Enter.) para verlo.
+Para ello abriremos un terminal (si no sabes como hacerlo accede a este [link ](https://www.ionos.es/ayuda/correo/solucion-de-problemas-correo-basiccorreo-profesional/abrir-la-linea-de-comandos-terminal/#:~:text=Abrir%20la%20l%C3%ADnea%20de%20comandos%20en%20Windows,entrada%20con%20la%20tecla%20Enter.) para verlo.)
 
 Y ejecutaremos
 
@@ -24,7 +24,7 @@ Y ejecutaremos
 Dependiendo de los sistemas operativos, el comando puede ser pip o pip3**
 >
 ```sh
-pip --version
+pip3 --version
 ```
 Si nos devuelve la versión podremos continuar con la instalacion. Si no consulta [Instalar Pip en tu Sistema Operativo](https://tecnonucleous.com/2018/01/28/como-instalar-pip-para-python-en-windows-mac-y-linux/).
 
@@ -33,7 +33,7 @@ Si nos devuelve la versión podremos continuar con la instalacion. Si no consult
 Para instalar CPCReady en nuestra maquina, desde un terminal ejecutaremos:
 
 ```sh
-pip install cpcready
+pip3 install cpcready
 ```
 Esto nos instalara la ultima version del software que este disponible en los repositorios. Podremos comprobar la version instalada ejecutando
 
@@ -46,12 +46,12 @@ CPCReady --version
 Si ya tubieramos una version instalada de **CPCReady** y queremos instalar la ultima ejecutaremos:
 
 ```sh
-pip install cpcready --upgrade
+pip3 install cpcready --upgrade
 ```
 
 ## Instalar Visual Studio Code
 
-Aunque ya tendrias instalado **CPCReady** y podrias empezar a crear tus propios proyectos con Basic, te recomendamos que para una mejor experiencia lo hagas a traves de la herramienta de desarrollo Visual Studio Code.
+Aunque ya tendrias instalado **CPCReady** y podrias empezar a crear tus propios proyectos, te recomendamos que para una mejor experiencia lo hagas a traves de la herramienta de desarrollo Visual Studio Code.
 
 Para instalarla ve al Software Market de tu sistema operativo, buscala e instalala. Si quieres instalarla manualmente puedes descargarla desde [aqui](https://code.visualstudio.com/downloads/).
 
@@ -60,9 +60,7 @@ Para instalarla ve al Software Market de tu sistema operativo, buscala e instala
 
 Sera necesario que en Visual Studio Code, instalemos las siguientes extensiones para mayor comodidad en la programación. Las extensiones a instalar son:
 
-- sdkcpc-amstrad-basic-language
-- sdkcpc-amstrad-basic-snippet
-- sdkcpc-amstrad-ugbasic-language
+- cpcready.basic-language-extension
 - ms-vscode.live-server
 
 ### Como instalar extensiones
