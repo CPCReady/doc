@@ -123,14 +123,57 @@ files       = MAIN.BIN,MAIN.BAS
 
 ```
 
-`[general] name:`
+`name=`
 Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.
 
-`[general] nomenclature63:` 
+`nomenclature63=` 
 Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.
 
-`[configurations] concatenate:` 
+`concatenate=` 
 La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.
 
-`[CDT] files:`
+`files=`
+Los ficheros en el orden en el que se cargaran en la imagen CDT.
+
+### emulators.cfg
+
+El archivo **emulators.cfg** dispone de las siguientes con las que podemos probar nuestros proyecto en Retro Virtual Machine.
+
+```sh
+[WEB6128]
+type   = web
+model  = 6128
+run    = run"MAIN.BAS"
+image  = out/Mi_Proyecto.DSK
+path   = cfg/rvm-web.html
+
+[CPC6128]
+type   = desktop
+model  = 6128
+run    = run"MAIN.BAS"
+image  = out/Mi_Proyecto.DSK
+
+[CPC464]
+type   = desktop
+model  = 464
+run    = run""
+image  = out/Mi_Proyecto.CDT
+
+[m4board]
+## There must be a folder called /tmp on the M4 Board
+ip      = 0.0.0.0
+execute = MAIN.BAS
+folder  = Mi_Proyecto
+```
+
+`name=`
+Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.
+
+`nomenclature63=` 
+Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.
+
+`concatenate=` 
+La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.
+
+`files=`
 Los ficheros en el orden en el que se cargaran en la imagen CDT.
