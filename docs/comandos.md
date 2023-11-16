@@ -4,14 +4,17 @@ Podemos ejecutar **CPCReady** desde el shell con uno de los siguientes comando q
 
 Disponesmos de los siguientes comandos con sus opciones
 
-- Build
-- Info
-- Palette
-- Project
-- Run
-- Screen
-- Sprite
+* [build](#build)
+* [info](#info)
+* [palette](#palette)
+* [project](#project)
+* [run](#run)
+* [screen](#screen)
+* [sprite](#sprite)
+* [about](#about)
+* [help](#help)
 
+<a name="help"></a>
 ## help
 
 Si queremos que nos muestre la ayuda de **CPCReady** ejecutaremos el comando
@@ -54,6 +57,7 @@ Options:
   --help   
 
 ```
+<a name="build"></a>
 ## build
 
 El comando **build** generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.
@@ -85,6 +89,7 @@ La opcion concatenate es valida si queremos trabajar en ficheros BAS independien
 `files=`
 Los ficheros en el orden en el que se cargaran en la imagen CDT.
 
+<a name="palette"></a>
 ## palette
 
 El comando **build** generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.
@@ -116,6 +121,7 @@ La opcion concatenate es valida si queremos trabajar en ficheros BAS independien
 `files=`
 Los ficheros en el orden en el que se cargaran en la imagen CDT.
 
+<a name="screen"></a>
 ## screen
 
 El comando **build** generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.
@@ -147,6 +153,7 @@ La opcion concatenate es valida si queremos trabajar en ficheros BAS independien
 `files=`
 Los ficheros en el orden en el que se cargaran en la imagen CDT.
 
+<a name="sprite"></a>
 ## sprite
 
 El comando **sprite** generara el fichero C y ASM con el codigo de cada lenguage para poder ser utilizado por ejemplo con 8BP.
@@ -181,6 +188,7 @@ Los ficheros en el orden en el que se cargaran en la imagen CDT.
 `-w, width`
 Los ficheros en el orden en el que se cargaran en la imagen CDT.
 
+<a name="run"></a>
 ## run
 
 El comando **run** Lanzara RetroVirtualMachine web/desktop o enviara los archivos y ejecutara en nuestra M4 Board, segun las configuraciones que tengamos establecidas en el fichero de configuracion **emulators.cfg**.
@@ -206,7 +214,7 @@ Nombre del fichero de configuracion de nuestros emuladores. Si no se pone cogera
 `-s, -setting ` 
 Nombre que le hemos dado a la configuración de nuestro emulador en el fichero **emulator.cfg**
 
-
+<a name="info"></a>
 ### info
 
 El comando **info** muestra informacion de nuestro proyecto.
@@ -223,7 +231,7 @@ concatenate =
 files       = MAIN.BIN,MAIN.BAS
 
 ```
-
+<a name="about"></a>
 ### about
 
 El comando **about** muestra informacion de CPCReady.
@@ -240,7 +248,7 @@ concatenate =
 files       = MAIN.BIN,MAIN.BAS
 
 ```
-
+<a name="project"></a>
 ### project
 
 El comando **project** nos creara la esctructura de carpetas necesarias para trabajar con **CPCReady** en la ruta donde estemos situado:
