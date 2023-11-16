@@ -60,7 +60,7 @@ Options:
 <a name="build"></a>
 ## build
 
-El comando **build** generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.
+El comando **build** generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones (cfg) y ficheros de nuestro proyecto.
 
 ```sh
 [general]
@@ -75,24 +75,17 @@ files       = MAIN.BIN,MAIN.BAS
 
 ```
 
+
 ### parametros
 
-`name=`
-Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.
+`-s, --scope`
+Alcance de nuestra generacion de imagenes. Si el comando le ejecutamos sin parametro se genera todo (DSK, CDT), si ponemos parametro tendremos que indicar una de las siguientes opciones dsk, cdt o all para todo.
 
-`nomenclature63=` 
-Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.
-
-`concatenate=` 
-La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.
-
-`files=`
-Los ficheros en el orden en el que se cargaran en la imagen CDT.
 
 <a name="palette"></a>
 ## palette
 
-El comando **build** generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.
+El comando **palette** nos mostrara por consola la paleta de colores de nuestra imagen en base al mode seleccionado.
 
 ```sh
 [general]
@@ -109,22 +102,16 @@ files       = MAIN.BIN,MAIN.BAS
 
 ### parametros
 
-`name=`
-Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.
+`-i, --image`
+Ruta de la imagen.
 
-`nomenclature63=` 
-Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.
-
-`concatenate=` 
-La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.
-
-`files=`
-Los ficheros en el orden en el que se cargaran en la imagen CDT.
+`-m, --mode` 
+Mode (0,1 o 2) para el que queremos nuestra paleta de colores.
 
 <a name="screen"></a>
 ## screen
 
-El comando **build** generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.
+El comando **screen** nos generara nuestra archivo imagen SCR preparado para ejecutar en cualquier Amstrad.
 
 ```sh
 [general]
@@ -141,17 +128,18 @@ files       = MAIN.BIN,MAIN.BAS
 
 ### parametros
 
-`name=`
-Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.
+`-i, --image`
+Ruta de la imagen.
 
-`nomenclature63=` 
-Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.
+`-m, --mode` 
+Mode (0,1 o 2) para el que generaremos nuestro imagen.
 
-`concatenate=` 
-La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.
+`-o, --out` 
+Carpeta donde se generaran los archivos resultantes de la ejecucion del comando.
 
-`files=`
-Los ficheros en el orden en el que se cargaran en la imagen CDT.
+`-d, dsk`
+Utilizaremos este parametro si queremos que se genere dentro de una imagen de disco DSK
+
 
 <a name="sprite"></a>
 ## sprite
@@ -174,19 +162,19 @@ files       = MAIN.BIN,MAIN.BAS
 ### parametros
 
 `-i, --image`
-Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.
+Ruta de la imagen.
 
 `-m, --mode` 
-Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.
+Mode (0,1 o 2) para el que generaremos nuestro sprite.
 
 `-o, --out` 
-La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.
+Carpeta donde se generaran los archivos resultantes de la ejecucion del comando.
 
 `-h, height`
-Los ficheros en el orden en el que se cargaran en la imagen CDT.
+Ancho de nuestro sprite en pixeles.
 
 `-w, width`
-Los ficheros en el orden en el que se cargaran en la imagen CDT.
+Altura de nuestro sprite en pixeles.
 
 <a name="run"></a>
 ## run
