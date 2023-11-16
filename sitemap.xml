@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://cpcready.github.io/doc/</loc>
-         <lastmod>2023-11-14</lastmod>
+         <lastmod>2023-11-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cpcready.github.io/doc/CHANGES/</loc>
-         <lastmod>2023-11-14</lastmod>
+         <lastmod>2023-11-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cpcready.github.io/doc/about/</loc>
-         <lastmod>2023-11-14</lastmod>
+         <lastmod>2023-11-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cpcready.github.io/doc/install/</loc>
-         <lastmod>2023-11-14</lastmod>
+         <lastmod>2023-11-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cpcready.github.io/doc/license/</loc>
-         <lastmod>2023-11-14</lastmod>
+         <lastmod>2023-11-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cpcready.github.io/doc/users-guide/</loc>
-         <lastmod>2023-11-14</lastmod>
+         <lastmod>2023-11-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cpcready.github.io/doc/versions/0.1.0/</loc>
-         <lastmod>2023-11-14</lastmod>
+         <lastmod>2023-11-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
