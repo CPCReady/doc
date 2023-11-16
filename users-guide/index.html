@@ -54,9 +54,13 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Como Empezar</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#ayuda">Ayuda</a>
+    <li class="toctree-l2"><a class="reference internal" href="#comandos">Comandos</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#help">help</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#project">project</a>
+    <li class="toctree-l3"><a class="reference internal" href="#project">project</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#archivos-de-configuracion">Archivos de configuracion</a>
         <ul>
@@ -101,10 +105,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="como-empezar">Como Empezar</h1>
+                <h1 id="opciones-disponibles">Opciones disponibles</h1>
 <p>Podemos ejecutar <strong>CPCReady</strong> desde el shell con uno de los siguientes comando que estan disponibles: cpc, cpcr o bien cpcready</p>
 <p>Disponemos de los siguientes comandos para trabajar.</p>
-<h2 id="ayuda">Ayuda</h2>
+<h2 id="comandos">Comandos</h2>
+<p>Disponesmos de los siguientes comandos con sus opciones</p>
+<ul>
+<li>Build</li>
+<li>Info</li>
+<li>Palette</li>
+<li>Project</li>
+<li>Run</li>
+<li>Screen</li>
+<li>Sprite</li>
+</ul>
+<h3 id="help">help</h3>
 <p>Si queremos que nos muestre la ayuda de <strong>CPCReady</strong> ejecutaremos el comando</p>
 <pre><code class="language-sh">cpcready --help
 
@@ -140,7 +155,7 @@ Options:
   --help   
 
 </code></pre>
-<h2 id="project">project</h2>
+<h3 id="project">project</h3>
 <p>El comando <strong>project</strong> nos creara la esctructura de carpetas necesarias para trabajar con <strong>CPCReady</strong> en la ruta donde estemos situado:</p>
 <ul>
 <li>Primero nos solicitara si queremos activar la nomenclatura 6:3, es decir que si solo queremos trabajar en el proyecto con nombres que solo pueden tener 6 caracteres de nombre de archivo y 3 de extension. Si añadimos un archivo al projecto que tenga mas de esos caracteres, cuando compilemos para generar nuestros archivos para CPC el proceso fallara. </li>
@@ -261,7 +276,7 @@ Direccion IP de la tarjeta M4 Board.</p>
 <p><code>execute</code>
 Archivo/Programa que ejecutaremos en la M4 Board.</p>
 <p><code>folder</code>
-Carpeta en M4 Board donde se enviaran los archivos de nuestro proyecto ESTA CARPETA DEBE EXISTIR PREVIAMENTE.</p>
+Carpeta en M4 Board donde se enviaran los archivos de nuestro proyecto. ESTA CARPETA DEBE EXISTIR PREVIAMENTE.</p>
 <h3 id="imagescfg">images.cfg</h3>
 <p>El archivo <strong>images.cfg</strong> contiene el modo de pantalla para el que se generara nuestra imagen SCR. Para que la generacion de nuestra Imagen de disco, cinta o archivos para la M4 Board incluya nuestra foto convertida para CPC, tiene que estar dada de alta en este fichero, si no lo esta nunca la generara, aunque existe en la carpeta img.</p>
 <pre><code class="language-sh">[screen.png]
@@ -269,7 +284,7 @@ mode = 0
 include_pal = TRUE
 </code></pre>
 <p><code>[screen.png]</code>
-Nombre de nuestra imagen. Es sensible a mayusculas y minusculas.</p>
+Nombre de nuestra imagen. </p>
 <p><code>mode</code> 
 Mode para el que vamos a generar nuestra paleta de colores e imagen. (0,1 o 2)</p>
 <p><code>include_pal</code> 
@@ -282,7 +297,7 @@ width = 16
 height = 16
 </code></pre>
 <p><code>[screen.png]</code>
-Nombre de nuestra imagen. Es sensible a mayusculas y minusculas.</p>
+Nombre de nuestra imagen. </p>
 <p><code>mode</code> 
 Mode para el que vamos a generar nuestra paleta de colores e imagen. (0,1 o 2).</p>
 <p><code>width</code> 
