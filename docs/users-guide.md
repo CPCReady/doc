@@ -194,29 +194,42 @@ Carpeta en M4 Board donde se enviaran los archivos de nuestro proyecto ESTA CARP
 
 ### images.cfg
 
-El archivo **images.cfg** contiene el modo de pantalla para el que se generara nuestra imagen SCR.
+El archivo **images.cfg** contiene el modo de pantalla para el que se generara nuestra imagen SCR. Para que la generacion de nuestra Imagen de disco, cinta o archivos para la M4 Board incluya nuestra foto convertida para CPC, tiene que estar dada de alta en este fichero, si no lo esta nunca la generara, aunque existe en la carpeta img.
 
 ```sh
-[general]
-name           = Mi_Proyecto
-nomenclature63 = Yes
-
-[configurations]
-concatenate =
-
-[CDT]
-files       = MAIN.BIN,MAIN.BAS
-
+[screen.png]
+mode = 0 
+include_pal = TRUE
 ```
 
-`name=`
-Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.
+`[screen.png]`
+Nombre de nuestra imagen. Es sensible a mayusculas y minusculas.
 
-`nomenclature63=` 
-Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.
+`mode ` 
+Mode para el que vamos a generar nuestra paleta de colores e imagen. (0,1 o 2)
 
-`concatenate=` 
-La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.
+`include_pal ` 
+Si queremos que en nuestra imagen de disco, cinta o archivos M4 board se incluya el archvi PAL que se genera al convertir la imagen a SCR. Valores aceptados TRUE o FALSE
 
-`files=`
-Los ficheros en el orden en el que se cargaran en la imagen CDT.
+### sprite.cfg
+
+El archivo **sprite.cfg** contiene los datos para generar nuestro archivo C y ASM con los datos de nuestro sprite. Para que estos ficheros se generen la imagen tiene que estar dada de alta en este fichero, si no lo esta nunca los generara, aunque existe en la carpeta img.
+
+```sh
+[screen.png]
+mode = 0
+width = 16
+height = 16
+```
+
+`[screen.png]`
+Nombre de nuestra imagen. Es sensible a mayusculas y minusculas.
+
+`mode ` 
+Mode para el que vamos a generar nuestra paleta de colores e imagen. (0,1 o 2).
+
+`width ` 
+Ancho en pixeles de nuestro sprite.
+
+`height ` 
+Alto en pixeles de nuestro sprite.
