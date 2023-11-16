@@ -2,10 +2,6 @@
 
 Podemos ejecutar **CPCReady** desde el shell con uno de los siguientes comando que estan disponibles: cpc, cpcr o bien cpcready
 
-Disponemos de los siguientes comandos para trabajar.
-
-## Comandos
-
 Disponesmos de los siguientes comandos con sus opciones
 
 - Build
@@ -16,7 +12,7 @@ Disponesmos de los siguientes comandos con sus opciones
 - Screen
 - Sprite
 
-### help
+## help
 
 Si queremos que nos muestre la ayuda de **CPCReady** ejecutaremos el comando
 
@@ -58,7 +54,7 @@ Options:
   --help   
 
 ```
-### build
+## build
 
 El comando **build** generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.
 
@@ -75,6 +71,8 @@ files       = MAIN.BIN,MAIN.BAS
 
 ```
 
+### parametros
+
 `name=`
 Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.
 
@@ -87,7 +85,7 @@ La opcion concatenate es valida si queremos trabajar en ficheros BAS independien
 `files=`
 Los ficheros en el orden en el que se cargaran en la imagen CDT.
 
-### palette
+## palette
 
 El comando **build** generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.
 
@@ -104,6 +102,8 @@ files       = MAIN.BIN,MAIN.BAS
 
 ```
 
+### parametros
+
 `name=`
 Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.
 
@@ -116,7 +116,7 @@ La opcion concatenate es valida si queremos trabajar en ficheros BAS independien
 `files=`
 Los ficheros en el orden en el que se cargaran en la imagen CDT.
 
-### screen
+## screen
 
 El comando **build** generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.
 
@@ -133,6 +133,8 @@ files       = MAIN.BIN,MAIN.BAS
 
 ```
 
+### parametros
+
 `name=`
 Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.
 
@@ -145,7 +147,7 @@ La opcion concatenate es valida si queremos trabajar en ficheros BAS independien
 `files=`
 Los ficheros en el orden en el que se cargaran en la imagen CDT.
 
-### sprite
+## sprite
 
 El comando **sprite** generara el fichero C y ASM con el codigo de cada lenguage para poder ser utilizado por ejemplo con 8BP.
 
@@ -162,7 +164,7 @@ files       = MAIN.BIN,MAIN.BAS
 
 ```
 
-**Los parametros disponibles para este comando son:**
+### parametros
 
 `-i, --image`
 Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.
@@ -179,7 +181,7 @@ Los ficheros en el orden en el que se cargaran en la imagen CDT.
 `-w, width`
 Los ficheros en el orden en el que se cargaran en la imagen CDT.
 
-### run
+## run
 
 El comando **run** Lanzara RetroVirtualMachine web/desktop o enviara los archivos y ejecutara en nuestra M4 Board, segun las configuraciones que tengamos establecidas en el fichero de configuracion **emulators.cfg**.
 
@@ -196,12 +198,12 @@ files       = MAIN.BIN,MAIN.BAS
 
 ```
 
-**Los parametros disponibles para este comando son:**
+### parametros
 
-`--file, -f : `
+`-f, --file : `
 Nombre del fichero de configuracion de nuestros emuladores. Si no se pone cogera por defecto el que se encuentre en la ruta **cfg** con el nombre **emulators.cfg**.
 
-`--setting, -s :` 
+`-s, -setting ` 
 Nombre que le hemos dado a la configuración de nuestro emulador en el fichero **emulator.cfg**
 
 

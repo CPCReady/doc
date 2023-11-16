@@ -6,7 +6,7 @@ nav:
     - Historial de Cambios: 'CHANGES.md'
   - 'Guia de usuario':
     - Instalacion: 'install.md'
-    - Como Empezar: 'users-guide.md'
+    - Comandos: 'comandos.md'
   - Acerca de: 'about.md'
 site_url: https://cpcready.github.io/doc/  
 theme: readthedocs
