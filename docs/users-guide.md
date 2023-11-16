@@ -137,7 +137,12 @@ Los ficheros en el orden en el que se cargaran en la imagen CDT.
 
 ### emulators.cfg
 
-El archivo **emulators.cfg** dispone de las siguientes con las que podemos probar nuestros proyecto en Retro Virtual Machine.
+El archivo **emulators.cfg** dispone de las siguientes opciones con las que podemos probar nuestros proyecto por maquina o por archivo en Retro Virtual Machine.
+
+> **NOTA: 
+A fecha de hoy (18.11.23) RetroVirtualMachine Web solo esta displonible para Amstrad CPC6 6128**
+>
+
 
 ```sh
 [WEB6128]
@@ -158,22 +163,60 @@ type   = desktop
 model  = 464
 run    = run""
 image  = out/Mi_Proyecto.CDT
-`name `
-[m4board]
-## There must be a folder called /tmp on the M4 Board
+
+[CPCM4]
+type    = m4board
 ip      = 0.0.0.0
-execute = MAIN.BAS
+execute = MAIN.BIN
 folder  = Mi_Proyecto
 ```
 
-`name `
+`type `
+El sistema donde vamos a probar, se podra elegir entre desktop, web o m4board.
+
+`model ` 
+Modelo de CPC en el que probaremos
+
+`run ` 
+Comando que se lanzara en el arranque de la maquina en RetroVirtualMAchine.
+
+`image `
+Imagen que se cargara en RetroVirtualMAchine.
+
+`ip `
+Direccion IP de la tarjeta M4 Board.
+
+`execute `
+Archivo/Programa que ejecutaremos en la M4 Board.
+
+`folder `
+Carpeta en M4 Board donde se enviaran los archivos de nuestro proyecto ESTA CARPETA DEBE EXISTIR PREVIAMENTE.
+
+### images.cfg
+
+El archivo **images.cfg** contiene el modo de pantalla para el que se generara nuestra imagen SCR.
+
+```sh
+[general]
+name           = Mi_Proyecto
+nomenclature63 = Yes
+
+[configurations]
+concatenate =
+
+[CDT]
+files       = MAIN.BIN,MAIN.BAS
+
+```
+
+`name=`
 Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.
 
-`nomenclature63 ` 
+`nomenclature63=` 
 Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.
 
-`concatenate ` 
+`concatenate=` 
 La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.
 
-`files `
+`files=`
 Los ficheros en el orden en el que se cargaran en la imagen CDT.
