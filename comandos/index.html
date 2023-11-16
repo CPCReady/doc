@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://cpcready.github.io/doc/users-guide/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://cpcready.github.io/doc/comandos/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Como Empezar - CPCReady</title>
+    <title>Comandos - CPCReady</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Como Empezar";
-        var mkdocs_page_input_path = "users-guide.md";
-        var mkdocs_page_url = "/doc/users-guide/";
+        var mkdocs_page_name = "Comandos";
+        var mkdocs_page_input_path = "comandos.md";
+        var mkdocs_page_url = "/doc/comandos/";
       </script>
     
     <!--[if lt IE 9]>
@@ -52,21 +52,37 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../install/">Instalacion</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Como Empezar</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Comandos</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#comandos">Comandos</a>
+    <li class="toctree-l2"><a class="reference internal" href="#help">help</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#build">build</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#help">help</a>
+    <li class="toctree-l3"><a class="reference internal" href="#parametros">parametros</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#build">build</a>
+        </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#palette">palette</a>
+    <li class="toctree-l2"><a class="reference internal" href="#palette">palette</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parametros_1">parametros</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#screen">screen</a>
+        </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#sprite">sprite</a>
+    <li class="toctree-l2"><a class="reference internal" href="#screen">screen</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parametros_2">parametros</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#run">run</a>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sprite">sprite</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parametros_3">parametros</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#run">run</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parametros_4">parametros</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#info">info</a>
     </li>
@@ -110,7 +126,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Guia de usuario</li>
-      <li class="breadcrumb-item active">Como Empezar</li>
+      <li class="breadcrumb-item active">Comandos</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -121,8 +137,6 @@
               
                 <h1 id="opciones-disponibles">Opciones disponibles</h1>
 <p>Podemos ejecutar <strong>CPCReady</strong> desde el shell con uno de los siguientes comando que estan disponibles: cpc, cpcr o bien cpcready</p>
-<p>Disponemos de los siguientes comandos para trabajar.</p>
-<h2 id="comandos">Comandos</h2>
 <p>Disponesmos de los siguientes comandos con sus opciones</p>
 <ul>
 <li>Build</li>
@@ -133,7 +147,7 @@
 <li>Screen</li>
 <li>Sprite</li>
 </ul>
-<h3 id="help">help</h3>
+<h2 id="help">help</h2>
 <p>Si queremos que nos muestre la ayuda de <strong>CPCReady</strong> ejecutaremos el comando</p>
 <pre><code class="language-sh">cpcready --help
 
@@ -169,7 +183,7 @@ Options:
   --help   
 
 </code></pre>
-<h3 id="build">build</h3>
+<h2 id="build">build</h2>
 <p>El comando <strong>build</strong> generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.</p>
 <pre><code class="language-sh">[general]
 name           = Mi_Proyecto
@@ -182,6 +196,7 @@ concatenate =
 files       = MAIN.BIN,MAIN.BAS
 
 </code></pre>
+<h3 id="parametros">parametros</h3>
 <p><code>name=</code>
 Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</p>
 <p><code>nomenclature63=</code> 
@@ -190,7 +205,7 @@ Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: 
 La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</p>
 <p><code>files=</code>
 Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
-<h3 id="palette">palette</h3>
+<h2 id="palette">palette</h2>
 <p>El comando <strong>build</strong> generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.</p>
 <pre><code class="language-sh">[general]
 name           = Mi_Proyecto
@@ -203,6 +218,7 @@ concatenate =
 files       = MAIN.BIN,MAIN.BAS
 
 </code></pre>
+<h3 id="parametros_1">parametros</h3>
 <p><code>name=</code>
 Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</p>
 <p><code>nomenclature63=</code> 
@@ -211,7 +227,7 @@ Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: 
 La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</p>
 <p><code>files=</code>
 Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
-<h3 id="screen">screen</h3>
+<h2 id="screen">screen</h2>
 <p>El comando <strong>build</strong> generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.</p>
 <pre><code class="language-sh">[general]
 name           = Mi_Proyecto
@@ -224,6 +240,7 @@ concatenate =
 files       = MAIN.BIN,MAIN.BAS
 
 </code></pre>
+<h3 id="parametros_2">parametros</h3>
 <p><code>name=</code>
 Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</p>
 <p><code>nomenclature63=</code> 
@@ -232,7 +249,7 @@ Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: 
 La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</p>
 <p><code>files=</code>
 Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
-<h3 id="sprite">sprite</h3>
+<h2 id="sprite">sprite</h2>
 <p>El comando <strong>sprite</strong> generara el fichero C y ASM con el codigo de cada lenguage para poder ser utilizado por ejemplo con 8BP.</p>
 <pre><code class="language-sh">[general]
 name           = Mi_Proyecto
@@ -245,7 +262,7 @@ concatenate =
 files       = MAIN.BIN,MAIN.BAS
 
 </code></pre>
-<p><strong>Los parametros disponibles para este comando son:</strong></p>
+<h3 id="parametros_3">parametros</h3>
 <p><code>-i, --image</code>
 Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</p>
 <p><code>-m, --mode</code> 
@@ -256,7 +273,7 @@ La opcion concatenate es valida si queremos trabajar en ficheros BAS independien
 Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
 <p><code>-w, width</code>
 Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
-<h3 id="run">run</h3>
+<h2 id="run">run</h2>
 <p>El comando <strong>run</strong> Lanzara RetroVirtualMachine web/desktop o enviara los archivos y ejecutara en nuestra M4 Board, segun las configuraciones que tengamos establecidas en el fichero de configuracion <strong>emulators.cfg</strong>.</p>
 <pre><code class="language-sh">[general]
 name           = Mi_Proyecto
@@ -269,10 +286,10 @@ concatenate =
 files       = MAIN.BIN,MAIN.BAS
 
 </code></pre>
-<p><strong>Los parametros disponibles para este comando son:</strong></p>
-<p><code>--file, -f :</code>
+<h3 id="parametros_4">parametros</h3>
+<p><code>-f, --file :</code>
 Nombre del fichero de configuracion de nuestros emuladores. Si no se pone cogera por defecto el que se encuentre en la ruta <strong>cfg</strong> con el nombre <strong>emulators.cfg</strong>.</p>
-<p><code>--setting, -s :</code> 
+<p><code>-s, -setting</code> 
 Nombre que le hemos dado a la configuración de nuestro emulador en el fichero <strong>emulator.cfg</strong></p>
 <h3 id="info">info</h3>
 <p>El comando <strong>info</strong> muestra informacion de nuestro proyecto.</p>

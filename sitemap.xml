@@ -16,17 +16,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://cpcready.github.io/doc/comandos/</loc>
+         <lastmod>2023-11-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://cpcready.github.io/doc/install/</loc>
          <lastmod>2023-11-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cpcready.github.io/doc/license/</loc>
-         <lastmod>2023-11-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://cpcready.github.io/doc/users-guide/</loc>
          <lastmod>2023-11-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
