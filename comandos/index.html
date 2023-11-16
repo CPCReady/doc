@@ -188,7 +188,7 @@ Options:
 </code></pre>
 <p><a name="build"></a></p>
 <h2 id="build">build</h2>
-<p>El comando <strong>build</strong> generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.</p>
+<p>El comando <strong>build</strong> generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones (cfg) y ficheros de nuestro proyecto.</p>
 <pre><code class="language-sh">[general]
 name           = Mi_Proyecto
 nomenclature63 = Yes
@@ -201,17 +201,11 @@ files       = MAIN.BIN,MAIN.BAS
 
 </code></pre>
 <h3 id="parametros">parametros</h3>
-<p><code>name=</code>
-Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</p>
-<p><code>nomenclature63=</code> 
-Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.</p>
-<p><code>concatenate=</code> 
-La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</p>
-<p><code>files=</code>
-Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
+<p><code>-s, --scope</code>
+Alcance de nuestra generacion de imagenes. Si el comando le ejecutamos sin parametro se genera todo (DSK, CDT), si ponemos parametro tendremos que indicar una de las siguientes opciones dsk, cdt o all para todo.</p>
 <p><a name="palette"></a></p>
 <h2 id="palette">palette</h2>
-<p>El comando <strong>build</strong> generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.</p>
+<p>El comando <strong>palette</strong> nos mostrara por consola la paleta de colores de nuestra imagen en base al mode seleccionado.</p>
 <pre><code class="language-sh">[general]
 name           = Mi_Proyecto
 nomenclature63 = Yes
@@ -224,17 +218,13 @@ files       = MAIN.BIN,MAIN.BAS
 
 </code></pre>
 <h3 id="parametros_1">parametros</h3>
-<p><code>name=</code>
-Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</p>
-<p><code>nomenclature63=</code> 
-Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.</p>
-<p><code>concatenate=</code> 
-La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</p>
-<p><code>files=</code>
-Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
+<p><code>-i, --image</code>
+Ruta de la imagen.</p>
+<p><code>-m, --mode</code> 
+Mode (0,1 o 2) para el que queremos nuestra paleta de colores.</p>
 <p><a name="screen"></a></p>
 <h2 id="screen">screen</h2>
-<p>El comando <strong>build</strong> generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.</p>
+<p>El comando <strong>screen</strong> nos generara nuestra archivo imagen SCR preparado para ejecutar en cualquier Amstrad.</p>
 <pre><code class="language-sh">[general]
 name           = Mi_Proyecto
 nomenclature63 = Yes
@@ -247,14 +237,14 @@ files       = MAIN.BIN,MAIN.BAS
 
 </code></pre>
 <h3 id="parametros_2">parametros</h3>
-<p><code>name=</code>
-Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</p>
-<p><code>nomenclature63=</code> 
-Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.</p>
-<p><code>concatenate=</code> 
-La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</p>
-<p><code>files=</code>
-Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
+<p><code>-i, --image</code>
+Ruta de la imagen.</p>
+<p><code>-m, --mode</code> 
+Mode (0,1 o 2) para el que generaremos nuestro imagen.</p>
+<p><code>-o, --out</code> 
+Carpeta donde se generaran los archivos resultantes de la ejecucion del comando.</p>
+<p><code>-d, dsk</code>
+Utilizaremos este parametro si queremos que se genere dentro de una imagen de disco DSK</p>
 <p><a name="sprite"></a></p>
 <h2 id="sprite">sprite</h2>
 <p>El comando <strong>sprite</strong> generara el fichero C y ASM con el codigo de cada lenguage para poder ser utilizado por ejemplo con 8BP.</p>
@@ -271,15 +261,15 @@ files       = MAIN.BIN,MAIN.BAS
 </code></pre>
 <h3 id="parametros_3">parametros</h3>
 <p><code>-i, --image</code>
-Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</p>
+Ruta de la imagen.</p>
 <p><code>-m, --mode</code> 
-Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.</p>
+Mode (0,1 o 2) para el que generaremos nuestro sprite.</p>
 <p><code>-o, --out</code> 
-La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</p>
+Carpeta donde se generaran los archivos resultantes de la ejecucion del comando.</p>
 <p><code>-h, height</code>
-Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
+Ancho de nuestro sprite en pixeles.</p>
 <p><code>-w, width</code>
-Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
+Altura de nuestro sprite en pixeles.</p>
 <p><a name="run"></a></p>
 <h2 id="run">run</h2>
 <p>El comando <strong>run</strong> Lanzara RetroVirtualMachine web/desktop o enviara los archivos y ejecutara en nuestra M4 Board, segun las configuraciones que tengamos establecidas en el fichero de configuracion <strong>emulators.cfg</strong>.</p>
