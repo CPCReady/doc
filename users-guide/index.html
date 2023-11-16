@@ -58,6 +58,20 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#help">help</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#build">build</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#palette">palette</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#screen">screen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sprite">sprite</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#run">run</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#info">info</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#about">about</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#project">project</a>
     </li>
         </ul>
@@ -153,6 +167,137 @@ Options:
   -i, --image TEXT    Input file name  [required]
   -m, --mode [0|1|2]  Image Mode (0, 1, 2)  [required]
   --help   
+
+</code></pre>
+<h3 id="build">build</h3>
+<p>El comando <strong>build</strong> generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.</p>
+<pre><code class="language-sh">[general]
+name           = Mi_Proyecto
+nomenclature63 = Yes
+
+[configurations]
+concatenate =
+
+[CDT]
+files       = MAIN.BIN,MAIN.BAS
+
+</code></pre>
+<p><code>name=</code>
+Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</p>
+<p><code>nomenclature63=</code> 
+Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.</p>
+<p><code>concatenate=</code> 
+La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</p>
+<p><code>files=</code>
+Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
+<h3 id="palette">palette</h3>
+<p>El comando <strong>build</strong> generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.</p>
+<pre><code class="language-sh">[general]
+name           = Mi_Proyecto
+nomenclature63 = Yes
+
+[configurations]
+concatenate =
+
+[CDT]
+files       = MAIN.BIN,MAIN.BAS
+
+</code></pre>
+<p><code>name=</code>
+Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</p>
+<p><code>nomenclature63=</code> 
+Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.</p>
+<p><code>concatenate=</code> 
+La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</p>
+<p><code>files=</code>
+Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
+<h3 id="screen">screen</h3>
+<p>El comando <strong>build</strong> generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.</p>
+<pre><code class="language-sh">[general]
+name           = Mi_Proyecto
+nomenclature63 = Yes
+
+[configurations]
+concatenate =
+
+[CDT]
+files       = MAIN.BIN,MAIN.BAS
+
+</code></pre>
+<p><code>name=</code>
+Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</p>
+<p><code>nomenclature63=</code> 
+Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.</p>
+<p><code>concatenate=</code> 
+La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</p>
+<p><code>files=</code>
+Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
+<h3 id="sprite">sprite</h3>
+<p>El comando <strong>sprite</strong> generara el fichero C y ASM con el codigo de cada lenguage para poder ser utilizado por ejemplo con 8BP.</p>
+<pre><code class="language-sh">[general]
+name           = Mi_Proyecto
+nomenclature63 = Yes
+
+[configurations]
+concatenate =
+
+[CDT]
+files       = MAIN.BIN,MAIN.BAS
+
+</code></pre>
+<p><strong>Los parametros disponibles para este comando son:</strong></p>
+<p><code>-i, --image</code>
+Nombre del proyecto. Este nombre no entra en la validacion de nomenclatura 6:3. Se recomienda que no contenga espacios.</p>
+<p><code>-m, --mode</code> 
+Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: Yes or No.</p>
+<p><code>-o, --out</code> 
+La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</p>
+<p><code>-h, height</code>
+Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
+<p><code>-w, width</code>
+Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
+<h3 id="run">run</h3>
+<p>El comando <strong>run</strong> Lanzara RetroVirtualMachine web/desktop o enviara los archivos y ejecutara en nuestra M4 Board, segun las configuraciones que tengamos establecidas en el fichero de configuracion <strong>emulators.cfg</strong>.</p>
+<pre><code class="language-sh">[general]
+name           = Mi_Proyecto
+nomenclature63 = Yes
+
+[configurations]
+concatenate =
+
+[CDT]
+files       = MAIN.BIN,MAIN.BAS
+
+</code></pre>
+<p><strong>Los parametros disponibles para este comando son:</strong></p>
+<p><code>--file, -f :</code>
+Nombre del fichero de configuracion de nuestros emuladores. Si no se pone cogera por defecto el que se encuentre en la ruta <strong>cfg</strong> con el nombre <strong>emulators.cfg</strong>.</p>
+<p><code>--setting, -s :</code> 
+Nombre que le hemos dado a la configuración de nuestro emulador en el fichero <strong>emulator.cfg</strong></p>
+<h3 id="info">info</h3>
+<p>El comando <strong>info</strong> muestra informacion de nuestro proyecto.</p>
+<pre><code class="language-sh">[general]
+name           = Mi_Proyecto
+nomenclature63 = Yes
+
+[configurations]
+concatenate =
+
+[CDT]
+files       = MAIN.BIN,MAIN.BAS
+
+</code></pre>
+<h3 id="about">about</h3>
+<p>El comando <strong>about</strong> muestra informacion de CPCReady.</p>
+<pre><code class="language-sh">[general]
+name           = Mi_Proyecto
+nomenclature63 = Yes
+
+[configurations]
+concatenate =
+
+[CDT]
+files       = MAIN.BIN,MAIN.BAS
 
 </code></pre>
 <h3 id="project">project</h3>
