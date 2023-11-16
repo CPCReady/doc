@@ -139,14 +139,17 @@
 <p>Podemos ejecutar <strong>CPCReady</strong> desde el shell con uno de los siguientes comando que estan disponibles: cpc, cpcr o bien cpcready</p>
 <p>Disponesmos de los siguientes comandos con sus opciones</p>
 <ul>
-<li>Build</li>
-<li>Info</li>
-<li>Palette</li>
-<li>Project</li>
-<li>Run</li>
-<li>Screen</li>
-<li>Sprite</li>
+<li><a href="#build">build</a></li>
+<li><a href="#info">info</a></li>
+<li><a href="#palette">palette</a></li>
+<li><a href="#project">project</a></li>
+<li><a href="#run">run</a></li>
+<li><a href="#screen">screen</a></li>
+<li><a href="#sprite">sprite</a></li>
+<li><a href="#about">about</a></li>
+<li><a href="#help">help</a></li>
 </ul>
+<p><a name="help"></a></p>
 <h2 id="help">help</h2>
 <p>Si queremos que nos muestre la ayuda de <strong>CPCReady</strong> ejecutaremos el comando</p>
 <pre><code class="language-sh">cpcready --help
@@ -183,6 +186,7 @@ Options:
   --help   
 
 </code></pre>
+<p><a name="build"></a></p>
 <h2 id="build">build</h2>
 <p>El comando <strong>build</strong> generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.</p>
 <pre><code class="language-sh">[general]
@@ -205,6 +209,7 @@ Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: 
 La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</p>
 <p><code>files=</code>
 Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
+<p><a name="palette"></a></p>
 <h2 id="palette">palette</h2>
 <p>El comando <strong>build</strong> generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.</p>
 <pre><code class="language-sh">[general]
@@ -227,6 +232,7 @@ Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: 
 La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</p>
 <p><code>files=</code>
 Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
+<p><a name="screen"></a></p>
 <h2 id="screen">screen</h2>
 <p>El comando <strong>build</strong> generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones y ficheros de nuestro proyecto.</p>
 <pre><code class="language-sh">[general]
@@ -249,6 +255,7 @@ Si queremos activar en nuestro proyecto la nomenclatura 6:3. Valores admitidos: 
 La opcion concatenate es valida si queremos trabajar en ficheros BAS independientes (No valido para Basic Compilado con ugbasic), de tal forma que tendremos nuestro codigo estructurado en varios ficheros y la compilacion lo dejara en uno solo para nuestra imagen de disco. de tal forma que si le damos un valor con un nombre de fichero concatenara todos los archivos BAS en él.</p>
 <p><code>files=</code>
 Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
+<p><a name="sprite"></a></p>
 <h2 id="sprite">sprite</h2>
 <p>El comando <strong>sprite</strong> generara el fichero C y ASM con el codigo de cada lenguage para poder ser utilizado por ejemplo con 8BP.</p>
 <pre><code class="language-sh">[general]
@@ -273,6 +280,7 @@ La opcion concatenate es valida si queremos trabajar en ficheros BAS independien
 Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
 <p><code>-w, width</code>
 Los ficheros en el orden en el que se cargaran en la imagen CDT.</p>
+<p><a name="run"></a></p>
 <h2 id="run">run</h2>
 <p>El comando <strong>run</strong> Lanzara RetroVirtualMachine web/desktop o enviara los archivos y ejecutara en nuestra M4 Board, segun las configuraciones que tengamos establecidas en el fichero de configuracion <strong>emulators.cfg</strong>.</p>
 <pre><code class="language-sh">[general]
@@ -291,6 +299,7 @@ files       = MAIN.BIN,MAIN.BAS
 Nombre del fichero de configuracion de nuestros emuladores. Si no se pone cogera por defecto el que se encuentre en la ruta <strong>cfg</strong> con el nombre <strong>emulators.cfg</strong>.</p>
 <p><code>-s, -setting</code> 
 Nombre que le hemos dado a la configuración de nuestro emulador en el fichero <strong>emulator.cfg</strong></p>
+<p><a name="info"></a></p>
 <h3 id="info">info</h3>
 <p>El comando <strong>info</strong> muestra informacion de nuestro proyecto.</p>
 <pre><code class="language-sh">[general]
@@ -304,6 +313,7 @@ concatenate =
 files       = MAIN.BIN,MAIN.BAS
 
 </code></pre>
+<p><a name="about"></a></p>
 <h3 id="about">about</h3>
 <p>El comando <strong>about</strong> muestra informacion de CPCReady.</p>
 <pre><code class="language-sh">[general]
@@ -317,6 +327,7 @@ concatenate =
 files       = MAIN.BIN,MAIN.BAS
 
 </code></pre>
+<p><a name="project"></a></p>
 <h3 id="project">project</h3>
 <p>El comando <strong>project</strong> nos creara la esctructura de carpetas necesarias para trabajar con <strong>CPCReady</strong> en la ruta donde estemos situado:</p>
 <ul>
