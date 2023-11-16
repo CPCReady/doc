@@ -1,10 +1,22 @@
-# Como Empezar
+# Opciones disponibles
 
 Podemos ejecutar **CPCReady** desde el shell con uno de los siguientes comando que estan disponibles: cpc, cpcr o bien cpcready
 
 Disponemos de los siguientes comandos para trabajar.
 
-## Ayuda
+## Comandos
+
+Disponesmos de los siguientes comandos con sus opciones
+
+- Build
+- Info
+- Palette
+- Project
+- Run
+- Screen
+- Sprite
+
+### help
 
 Si queremos que nos muestre la ayuda de **CPCReady** ejecutaremos el comando
 
@@ -47,7 +59,7 @@ Options:
 
 ```
 
-## project
+### project
 
 El comando **project** nos creara la esctructura de carpetas necesarias para trabajar con **CPCReady** en la ruta donde estemos situado:
 
@@ -190,7 +202,7 @@ Direccion IP de la tarjeta M4 Board.
 Archivo/Programa que ejecutaremos en la M4 Board.
 
 `folder `
-Carpeta en M4 Board donde se enviaran los archivos de nuestro proyecto ESTA CARPETA DEBE EXISTIR PREVIAMENTE.
+Carpeta en M4 Board donde se enviaran los archivos de nuestro proyecto. ESTA CARPETA DEBE EXISTIR PREVIAMENTE.
 
 ### images.cfg
 
@@ -203,7 +215,7 @@ include_pal = TRUE
 ```
 
 `[screen.png]`
-Nombre de nuestra imagen. Es sensible a mayusculas y minusculas.
+Nombre de nuestra imagen. 
 
 `mode ` 
 Mode para el que vamos a generar nuestra paleta de colores e imagen. (0,1 o 2)
@@ -223,7 +235,7 @@ height = 16
 ```
 
 `[screen.png]`
-Nombre de nuestra imagen. Es sensible a mayusculas y minusculas.
+Nombre de nuestra imagen. 
 
 `mode ` 
 Mode para el que vamos a generar nuestra paleta de colores e imagen. (0,1 o 2).
