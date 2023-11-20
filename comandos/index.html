@@ -57,33 +57,15 @@
     <li class="toctree-l2"><a class="reference internal" href="#help">help</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#build">build</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#parametros">parametros</a>
-    </li>
-        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#palette">palette</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#parametros_1">parametros</a>
-    </li>
-        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#screen">screen</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#parametros_2">parametros</a>
-    </li>
-        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#sprite">sprite</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#parametros_3">parametros</a>
-    </li>
-        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#run">run</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#parametros_4">parametros</a>
-    </li>
     <li class="toctree-l3"><a class="reference internal" href="#info">info</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#about">about</a>
@@ -135,7 +117,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="opciones-disponibles">Opciones disponibles</h1>
+                <h1 id="listado-de-comandos">Listado de Comandos</h1>
 <p>Podemos ejecutar <strong>CPCReady</strong> desde el shell con uno de los siguientes comando que estan disponibles: cpc, cpcr o bien cpcready</p>
 <p>Disponesmos de los siguientes comandos con sus opciones</p>
 <ul>
@@ -200,24 +182,32 @@ concatenate =
 files       = MAIN.BIN,MAIN.BAS
 
 </code></pre>
-<h3 id="parametros">parametros</h3>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Requerido</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-s, --scope</code></td>
+<td>False</td>
+<td>lcance de nuestra generacion de imagenes. Si el comando le ejecutamos sin parametro se genera todo (DSK, CDT), si ponemos parametro tendremos que indicar una de las siguientes opciones dsk, cdt o all para todo.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>parametros</strong></p>
 <p><code>-s, --scope</code>
 Alcance de nuestra generacion de imagenes. Si el comando le ejecutamos sin parametro se genera todo (DSK, CDT), si ponemos parametro tendremos que indicar una de las siguientes opciones dsk, cdt o all para todo.</p>
 <p><a name="palette"></a></p>
 <h2 id="palette">palette</h2>
 <p>El comando <strong>palette</strong> nos mostrara por consola la paleta de colores de nuestra imagen en base al mode seleccionado.</p>
-<pre><code class="language-sh">[general]
-name           = Mi_Proyecto
-nomenclature63 = Yes
-
-[configurations]
-concatenate =
-
-[CDT]
-files       = MAIN.BIN,MAIN.BAS
+<pre><code class="language-sh">cpcready palette --image /home/amstrad/image.png --mode 0
 
 </code></pre>
-<h3 id="parametros_1">parametros</h3>
+<p><strong>parametros</strong></p>
 <p><code>-i, --image</code>
 Ruta de la imagen.</p>
 <p><code>-m, --mode</code> 
@@ -225,18 +215,10 @@ Mode (0,1 o 2) para el que queremos nuestra paleta de colores.</p>
 <p><a name="screen"></a></p>
 <h2 id="screen">screen</h2>
 <p>El comando <strong>screen</strong> nos generara nuestra archivo imagen SCR preparado para ejecutar en cualquier Amstrad.</p>
-<pre><code class="language-sh">[general]
-name           = Mi_Proyecto
-nomenclature63 = Yes
-
-[configurations]
-concatenate =
-
-[CDT]
-files       = MAIN.BIN,MAIN.BAS
+<pre><code class="language-sh">cpcready screen --image /home/amstrad/image.png --mode 0 --out /home/amstrad/scr --dsk
 
 </code></pre>
-<h3 id="parametros_2">parametros</h3>
+<p><strong>parametros</strong></p>
 <p><code>-i, --image</code>
 Ruta de la imagen.</p>
 <p><code>-m, --mode</code> 
@@ -259,16 +241,16 @@ concatenate =
 files       = MAIN.BIN,MAIN.BAS
 
 </code></pre>
-<h3 id="parametros_3">parametros</h3>
+<p><strong>parametros</strong></p>
 <p><code>-i, --image</code>
 Ruta de la imagen.</p>
 <p><code>-m, --mode</code> 
 Mode (0,1 o 2) para el que generaremos nuestro sprite.</p>
 <p><code>-o, --out</code> 
 Carpeta donde se generaran los archivos resultantes de la ejecucion del comando.</p>
-<p><code>-h, height</code>
+<p><code>-h, --height</code>
 Ancho de nuestro sprite en pixeles.</p>
-<p><code>-w, width</code>
+<p><code>-w, --width</code>
 Altura de nuestro sprite en pixeles.</p>
 <p><a name="run"></a></p>
 <h2 id="run">run</h2>
@@ -284,7 +266,7 @@ concatenate =
 files       = MAIN.BIN,MAIN.BAS
 
 </code></pre>
-<h3 id="parametros_4">parametros</h3>
+<p><strong>parametros</strong></p>
 <p><code>-f, --file :</code>
 Nombre del fichero de configuracion de nuestros emuladores. Si no se pone cogera por defecto el que se encuentre en la ruta <strong>cfg</strong> con el nombre <strong>emulators.cfg</strong>.</p>
 <p><code>-s, -setting</code> 
