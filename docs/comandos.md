@@ -63,21 +63,13 @@ Options:
 El comando **build** generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones (cfg) y ficheros de nuestro proyecto.
 
 ```sh
-[general]
-name           = Mi_Proyecto
-nomenclature63 = Yes
-
-[configurations]
-concatenate =
-
-[CDT]
-files       = MAIN.BIN,MAIN.BAS
+cpcready build --scope all
 
 ```
 
-| Parametro | Requerido |Descripción |
-| ------ | ------ | ------ |
-| `-s, --scope` | False | lcance de nuestra generacion de imagenes. Si el comando le ejecutamos sin parametro se genera todo (DSK, CDT), si ponemos parametro tendremos que indicar una de las siguientes opciones dsk, cdt o all para todo.|
+| Parametro | Requerido |Opciones|Descripción |
+| ------ | ------ | ------ |------ |
+| `-s, --scope` | False | dsk, cdt, all|Alcance de nuestra generacion de imagenes. Si el comando le ejecutamos sin parametro se genera todo (DSK, CDT), si ponemos parametro tendremos que indicar una de las siguientes opciones dsk, cdt o all para todo.|
 
 **parametros**
 
