@@ -171,15 +171,7 @@ Options:
 <p><a name="build"></a></p>
 <h2 id="build">build</h2>
 <p>El comando <strong>build</strong> generará las imagenes DSK, CDT y archivos para la M4 Board en base a las configuraciones (cfg) y ficheros de nuestro proyecto.</p>
-<pre><code class="language-sh">[general]
-name           = Mi_Proyecto
-nomenclature63 = Yes
-
-[configurations]
-concatenate =
-
-[CDT]
-files       = MAIN.BIN,MAIN.BAS
+<pre><code class="language-sh">cpcready build --scope all
 
 </code></pre>
 <table>
@@ -187,6 +179,7 @@ files       = MAIN.BIN,MAIN.BAS
 <tr>
 <th>Parametro</th>
 <th>Requerido</th>
+<th>Opciones</th>
 <th>Descripción</th>
 </tr>
 </thead>
@@ -194,7 +187,8 @@ files       = MAIN.BIN,MAIN.BAS
 <tr>
 <td><code>-s, --scope</code></td>
 <td>False</td>
-<td>lcance de nuestra generacion de imagenes. Si el comando le ejecutamos sin parametro se genera todo (DSK, CDT), si ponemos parametro tendremos que indicar una de las siguientes opciones dsk, cdt o all para todo.</td>
+<td>dsk, cdt, all</td>
+<td>Alcance de nuestra generacion de imagenes. Si el comando le ejecutamos sin parametro se genera todo (DSK, CDT), si ponemos parametro tendremos que indicar una de las siguientes opciones dsk, cdt o all para todo.</td>
 </tr>
 </tbody>
 </table>
