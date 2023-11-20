@@ -1,4 +1,4 @@
-# Opciones disponibles
+# Listado de Comandos
 
 Podemos ejecutar **CPCReady** desde el shell con uno de los siguientes comando que estan disponibles: cpc, cpcr o bien cpcready
 
@@ -75,8 +75,11 @@ files       = MAIN.BIN,MAIN.BAS
 
 ```
 
+| Parametro | Requerido |Descripción |
+| ------ | ------ | ------ |
+| `-s, --scope` | False | lcance de nuestra generacion de imagenes. Si el comando le ejecutamos sin parametro se genera todo (DSK, CDT), si ponemos parametro tendremos que indicar una de las siguientes opciones dsk, cdt o all para todo.|
 
-### parametros
+**parametros**
 
 `-s, --scope`
 Alcance de nuestra generacion de imagenes. Si el comando le ejecutamos sin parametro se genera todo (DSK, CDT), si ponemos parametro tendremos que indicar una de las siguientes opciones dsk, cdt o all para todo.
@@ -88,19 +91,11 @@ Alcance de nuestra generacion de imagenes. Si el comando le ejecutamos sin param
 El comando **palette** nos mostrara por consola la paleta de colores de nuestra imagen en base al mode seleccionado.
 
 ```sh
-[general]
-name           = Mi_Proyecto
-nomenclature63 = Yes
-
-[configurations]
-concatenate =
-
-[CDT]
-files       = MAIN.BIN,MAIN.BAS
+cpcready palette --image /home/amstrad/image.png --mode 0
 
 ```
 
-### parametros
+**parametros**
 
 `-i, --image`
 Ruta de la imagen.
@@ -114,19 +109,11 @@ Mode (0,1 o 2) para el que queremos nuestra paleta de colores.
 El comando **screen** nos generara nuestra archivo imagen SCR preparado para ejecutar en cualquier Amstrad.
 
 ```sh
-[general]
-name           = Mi_Proyecto
-nomenclature63 = Yes
-
-[configurations]
-concatenate =
-
-[CDT]
-files       = MAIN.BIN,MAIN.BAS
+cpcready screen --image /home/amstrad/image.png --mode 0 --out /home/amstrad/scr --dsk
 
 ```
 
-### parametros
+**parametros**
 
 `-i, --image`
 Ruta de la imagen.
@@ -159,7 +146,7 @@ files       = MAIN.BIN,MAIN.BAS
 
 ```
 
-### parametros
+**parametros**
 
 `-i, --image`
 Ruta de la imagen.
@@ -170,10 +157,10 @@ Mode (0,1 o 2) para el que generaremos nuestro sprite.
 `-o, --out` 
 Carpeta donde se generaran los archivos resultantes de la ejecucion del comando.
 
-`-h, height`
+`-h, --height`
 Ancho de nuestro sprite en pixeles.
 
-`-w, width`
+`-w, --width`
 Altura de nuestro sprite en pixeles.
 
 <a name="run"></a>
@@ -194,7 +181,7 @@ files       = MAIN.BIN,MAIN.BAS
 
 ```
 
-### parametros
+**parametros**
 
 `-f, --file : `
 Nombre del fichero de configuracion de nuestros emuladores. Si no se pone cogera por defecto el que se encuentre en la ruta **cfg** con el nombre **emulators.cfg**.
